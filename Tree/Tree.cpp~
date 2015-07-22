@@ -1,0 +1,42 @@
+#include "Tree.h"
+using namespace std;
+Node * root = NULL;
+void insert(Node* root, int &data){
+
+	if(root == nullptr){
+		Node *temp = new Node();
+		temp->data = data;
+		temp ->left = NULL;
+		temp ->right = NULL;
+		root = temp;
+	}
+	else if(data <= root->data){
+		insert(root->left,data);
+	}
+	else{
+		insert(root->right,data);
+	}
+
+}
+
+void print(Node* root){
+
+	if(root!=NULL){
+cout<<"\n entered";
+		cout<<endl<<root->data;
+		print(root->left);
+		print(root->right);
+	}
+}
+	int main(){
+
+		
+		int k =15;
+		insert(root,k);
+		k =10;
+		insert(root,k);
+		k =150;
+		insert(root,k);
+		print(root);
+		return 0;
+	}
