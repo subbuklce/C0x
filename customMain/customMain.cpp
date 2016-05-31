@@ -3,7 +3,7 @@
 class test{
 public:
 test(){ std::cout<<"\n Constructor";}
-//main program in different namespace.
+//main program in different name space.
 int main(){ std::cout<<"\n Class main module "; }
 };
 
